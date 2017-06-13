@@ -1,5 +1,5 @@
 # Gradle
-gradle/wrapper/gradle-warpper.properties
+gradle-wrapper.properties
 .gradle/
 
 # Do not ignore gradle wrapper
