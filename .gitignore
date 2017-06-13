@@ -1,0 +1,21 @@
+# Gradle
+gradle/wrapper/gradle-warpper.properties
+.gradle/
+
+# Do not ignore gradle wrapper
+!gradle-wrapper.jar
+
+# IntelliJ stuff
+.idea/*
+
+# Keep Useful run config files for IntelliJ
+!.idea/
+!.idea/runConfigurations/
+.idea/runConfigurations/*
+!.idea/runConfigurations/dev.xml
+
+# General
+classes/
+build/
+logs/
+out/
