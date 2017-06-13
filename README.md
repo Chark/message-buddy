@@ -1,1 +1,2 @@
-# sms-buddy
+# Message Buddy
+Sending messages and stuff.
