@@ -1,16 +1,17 @@
 package io.chark.message_buddy
 
-import org.springframework.boot.SpringApplication
-import org.springframework.boot.autoconfigure.SpringBootApplication
+import io.chark.message_buddy.config.module.ModuleConfiguration
+import io.chark.message_buddy.config.router.RouterConfiguration
+import io.chark.message_buddy.config.router.Routers
 
-@SpringBootApplication
-class MessageBuddyApplication {
+fun main(args: Array<String>) {
+    configure()
+}
 
-    companion object {
-
-        @JvmStatic
-        fun main(args: Array<String>) {
-            SpringApplication.run(MessageBuddyApplication::class.java, *args)
-        }
-    }
+/**
+ * Configure the application.
+ */
+fun configure() {
+    val injector = ModuleConfiguration().injector
+    RouterConfiguration(injector, injector.getInstance(Routers::class.java))
 }
