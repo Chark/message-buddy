@@ -8,11 +8,11 @@ class ModuleConfiguration {
     val injector: Injector = Guice.createInjector(modules())
 
     /**
-     * Create all modules.
+     * Creates all modules (initializes DI). Note that order of modules is important.
      */
     private fun modules() = listOf(
             LibraryModule(),
-            FilterModule(),
-            RouterModule()
+            ServiceModule(),
+            ControllerModule()
     )
 }

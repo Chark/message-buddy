@@ -1,9 +1,6 @@
 package io.chark.message_buddy.app.hello
 
-import com.google.inject.Singleton
+interface HelloService {
 
-@Singleton
-class HelloService {
-
-    fun hello(name: String) = Hello(name)
+    fun hello(name: String): Hello
 }
