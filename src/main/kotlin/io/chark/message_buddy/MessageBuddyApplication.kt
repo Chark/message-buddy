@@ -1,16 +1,11 @@
 package io.chark.message_buddy
 
-import org.springframework.boot.SpringApplication
-import org.springframework.boot.autoconfigure.SpringBootApplication
+import io.chark.message_buddy.config.module.ModuleConfiguration
 
-@SpringBootApplication
-class MessageBuddyApplication {
+fun main(args: Array<String>) {
+    configure()
+}
 
-    companion object {
-
-        @JvmStatic
-        fun main(args: Array<String>) {
-            SpringApplication.run(MessageBuddyApplication::class.java, *args)
-        }
-    }
+fun configure() {
+    ModuleConfiguration()
 }
